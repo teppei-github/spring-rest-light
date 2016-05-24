@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration PUBLIC "-//APACHE//DTD LOG4J 1.2//EN" "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- Appenders -->
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Target" value="System.out" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%-5p: %c - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- Filelog & Filesize rotation -->
+	<appender name="sizeRotation" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="./sample.log" />
+		<param name="Append" value="true" />
+		<param name="Encoding" value="UTF-8" />
+		<param name="MaxFileSize" value="100KB" />
+		<param name="MaxBackupIndex" value="3" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{yyyy-MM-dd hh:mm:ss(E)} [%t] %p %c - %m%n" />
+		</layout>
+	</appender>
+
+
+	<!-- Application Loggers -->
+	<logger name="njc.webservice.arch">
+		<level value="info" />
+	</logger>
+
+	<!-- 3rdparty Loggers -->
+	<logger name="org.springframework.core">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.beans">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.context">
+		<level value="info" />
+	</logger>
+
+	<logger name="org.springframework.web">
+		<level value="info" />
+	</logger>
+
+	<!-- Root Logger -->
+	<root>
+		<priority value="info" />
+		<appender-ref ref="console" />
+		<!-- 2015.7.8 Filelog & Filesize rotation -->
+		<appender-ref ref="sizeRotation" />
+	</root>
+
+</log4j:configuration>
