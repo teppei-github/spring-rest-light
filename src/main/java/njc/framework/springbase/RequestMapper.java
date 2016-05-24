@@ -96,15 +96,29 @@ public class RequestMapper {
 	 * @return　対応クラス名・テンプレートのMap
 	 * @throws Exception 処理例外
 	 */
-	private static Map<?,?> getMappingMap(int request_type, String content_name,String method) throws Exception {
+	private static Map<?,?> getMappingMap(int request_type, String content_name, String method) throws Exception {
 		
 		Map<String, String> resMap = new HashMap<String, String>();
 		
 		//-----------------------------------------
 		// 以下は実際は設定ファイルやデータベースでマッピングするほうがよさそう
-		//----------------------------------------
-		resMap.put("CLASS_NAME", "");
-		resMap.put("TEMPLATE_NAME", "");
+		//----------------------------------------		
+		switch (request_type) {
+			case CommonPara.REQUEST_TYPE_RESTAPI:
+				if (content_name.equals("sample")) {
+					resMap.put("CLASS_NAME", "njc.webservice.arch.ApiSample");
+					resMap.put("TEMPLATE_NAME", "");
+				}
+				break;
+			case CommonPara.REQUEST_TYPE_JSP:
+				if (content_name.equals("hello")) {
+					resMap.put("CLASS_NAME", "njc.webservice.arch.JspHello");
+					resMap.put("TEMPLATE_NAME", "hello");
+				}
+				break;
+			default:
+				break;
+		}
 		
 		return resMap;
 	}

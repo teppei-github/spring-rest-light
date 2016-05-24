@@ -20,6 +20,7 @@ public interface BlockRestInterface {
 	 * @throws Exception エラー
 	 */
 	Boolean get(
+			CommonDBAccesser datasource,
 			HttpServletRequest request,
 			Map<String, Object> input,
 			String methodType,
@@ -34,6 +35,7 @@ public interface BlockRestInterface {
 	 * @throws Exception エラー
 	 */
 	Boolean post(
+			CommonDBAccesser datasource,
 			HttpServletRequest request,
 			Map<String, Object> input,
 			String methodType,
@@ -48,6 +50,7 @@ public interface BlockRestInterface {
 	 * @throws Exception エラー
 	 */
 	Boolean put(
+			CommonDBAccesser datasource,
 			HttpServletRequest request,
 			Map<String, Object> input,
 			String methodType,
@@ -62,6 +65,7 @@ public interface BlockRestInterface {
 	 * @throws Exception エラー
 	 */
 	Boolean delete(
+			CommonDBAccesser datasource,
 			HttpServletRequest request,
 			Map<String, Object> input,
 			String methodType,

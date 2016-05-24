@@ -87,14 +87,14 @@ public class RequestReciever {
 						input.put(key, request.getParameter(key));
 					}
 				}
-				content_resultBoolean = ContentClass.get(request, input, methodType, result);
+				content_resultBoolean = ContentClass.get(database, request, input, methodType, result);
 				
 			} else if (methodType.equalsIgnoreCase("POST")) {
-				content_resultBoolean = ContentClass.post(request, input, methodType, result);
+				content_resultBoolean = ContentClass.post(database, request, input, methodType, result);
 			} else if (methodType.equalsIgnoreCase("PUT")) {
-				content_resultBoolean = ContentClass.put(request, input, methodType, result);
+				content_resultBoolean = ContentClass.put(database, request, input, methodType, result);
 			} else if (methodType.equalsIgnoreCase("DELETE")) {
-				content_resultBoolean = ContentClass.delete(request, input, methodType, result);
+				content_resultBoolean = ContentClass.delete(database, request, input, methodType, result);
 			} else {
 				content_resultBoolean = false;
 			}
