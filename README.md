@@ -40,7 +40,7 @@ Java Spring Frameworkで作成したREST APIサーバの軽量版
 　Browseクリック>インストールしておいたTomcat8を選択>Nextクリック  
 　プロジェクトを選択してAdd>Finishクリック  
 
-* 動作確認* 
+* 動作確認
 　Tomcatサーバを右クリックしてStart  
 　ブラウザ起動して、http://localhost:8080/NsoArchSpringApp/content/hello  
 　Hello Worldが表示されたらOK  
