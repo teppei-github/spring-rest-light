@@ -41,6 +41,7 @@ Java Spring Frameworkで作成したREST APIサーバの軽量版
 　プロジェクトを選択してAdd>Finishクリック  
 
 * 動作確認
+　Package Explorerでプロジェクトのルートを右クリック>Run As>Maven Install  
 　Tomcatサーバを右クリックしてStart  
 　ブラウザ起動して、http://localhost:8080/NsoArchSpringApp/content/hello  
 　Hello Worldが表示されたらOK  
