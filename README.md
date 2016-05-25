@@ -18,7 +18,7 @@ Java Spring Frameworkで作成したREST APIサーバの軽量版
 ## 環境構築手順
 * JavaSE8をインストールしておく
 * Tomcat8をインストールしておく
-* ソースをGiｔHubからcloneかダウンロードしておく
+* ソースをGitHubからcloneかダウンロードしておく
 
 * STS
 　ダウンロードして解凍>起動  
