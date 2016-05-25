@@ -20,7 +20,7 @@ Java Spring Frameworkで作成したREST APIサーバの軽量版
 * Tomcat8をインストールしておく
 * ソースをGitHubからcloneかダウンロードしておく
 
-* STS
+* STS  
 　ダウンロードして解凍>起動  
 　Package Explorerを右クリック>import  
 　Maven>Exist～を選んで、GitHubから落としたフォルダを指定  
@@ -28,19 +28,19 @@ Java Spring Frameworkで作成したREST APIサーバの軽量版
 　Package Explorerでプロジェクトのルートを右クリック>Maven>Update Project>Force Updateにチェック入れてOK  
 　　※一応やっておく  
 
-* 設定
+* 設定  
 　window>Preferences>Java>Installed JREs  
 　AddかSearchでjdk1.8.XXを選択  
 　Package Explorerでプロジェクトのルートを右クリック>Properties>Project Facets>Javaを1.5から1.8に変更してApply>OK  
 　　※ここは人によっては違う設定方法とってるかも  
 
-* アプリサーバ
+* アプリサーバ  
 　Servers上（Package Explorerの下にあるスペース）で右クリック>New>Server  
 　Apache>Tomcat 8.0 Server>Nextクリック  
 　Browseクリック>インストールしておいたTomcat8を選択>Nextクリック  
 　プロジェクトを選択してAdd>Finishクリック  
 
-* 動作確認
+* 動作確認  
 　Package Explorerでプロジェクトのルートを右クリック>Run As>Maven Install  
 　Tomcatサーバを右クリックしてStart  
 　ブラウザ起動して、http://localhost:8080/NsoArchSpringApp/content/hello  
